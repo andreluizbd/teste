@@ -28,6 +28,12 @@ public class ContatoController {
 		return contato;
 	}
 	
+	@RequestMapping(value="/delete", method=RequestMethod.DELETE)
+	public @ResponseBody Contato delete(@RequestBody Contato contato){
+		repository.delete(contato);
+		return contato;
+	}
+	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public List<Contato> get(){
 		
