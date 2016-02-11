@@ -19,8 +19,29 @@ public class Contato {
 	private String sobrenome;
 	@Column(name="email", length=128)
 	private String email;
-	@Column(name="telefone", length=128)
+	@Column(name="telefone", length=32)
 	private String telefone;
+	
+	public Contato() {
+	}
+	
+	/**
+	 * @param id
+	 * @param nome
+	 * @param sobrenome
+	 * @param email
+	 * @param telefone
+	 */
+	public Contato(Long id, String nome, String sobrenome, String email, String telefone) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+		this.telefone = telefone;
+	}
+
+
 	/**
 	 * @return the id
 	 */
